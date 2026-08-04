@@ -22,16 +22,14 @@ export function Skills() {
   const filtered = active === "All" ? skills : skills.filter((s) => s.cat === active);
 
   return (
-    <section id="skills" className="relative py-32 px-6 md:px-12 overflow-hidden">
+    <section id="skills" className="relative py-16 px-6 md:px-12 overflow-hidden">
       <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-accent/10 blur-[120px]" />
 
       <div className="relative max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
-            <div className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-4">— 01 / Capabilities</div>
-            <h2 className="font-display text-5xl md:text-7xl text-gradient leading-none">An ecosystem<br />of <span className="italic text-aurora">craft</span>.</h2>
+            <h2 className="font-display text-4xl md:text-5xl text-gradient leading-none">Skills</h2>
           </div>
-          <p className="max-w-md text-muted-foreground">A living stack — refined across years of shipping production systems, design tools, and intelligent products.</p>
         </div>
 
         <div className="flex flex-wrap gap-2 mb-10">

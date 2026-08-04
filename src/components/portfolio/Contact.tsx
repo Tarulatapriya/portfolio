@@ -1,99 +1,161 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, MapPin, Send } from "lucide-react";
-import { useState } from "react";
+import { ArrowUpRight, Dna, Cloud, Code, Github, Linkedin } from "lucide-react";
 
 export function Contact() {
-  const [sent, setSent] = useState(false);
-
   return (
-    <section id="contact" className="relative py-32 px-6 md:px-12 overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-primary/15 blur-[160px] glow-pulse" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-accent/15 blur-[140px]" />
-
-      <div className="relative max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-mono uppercase tracking-widest mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 glow-pulse" />
-            Available for Work
-          </div>
-          <h2 className="font-display text-6xl md:text-8xl leading-none">
-            <span className="text-gradient">Let's build the</span><br />
-            <span className="text-aurora italic">next icon.</span>
-          </h2>
-          <p className="mt-6 text-muted-foreground max-w-xl mx-auto">
-            Open to select engagements, product collaborations, and creative residencies through 2026.
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8">
-          <motion.form
-            onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="glass-strong rounded-3xl p-8 md:p-10 space-y-5"
-          >
-            <div className="grid sm:grid-cols-2 gap-5">
-              <Field label="Name" placeholder="Your name" />
-              <Field label="Email" type="email" placeholder="you@studio.com" />
+    <section id="contact" className="py-4 px-6 md:px-12 max-w-3xl mx-auto mb-8">
+      
+      {/* Three vertical profile cards */}
+      <div className="flex flex-col gap-4 mb-6">
+        <motion.a 
+          href="https://rosalind.info/users/tarulata_priya/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex items-center justify-between bg-[#0d0d0d] border border-border rounded-2xl p-6 group hover:border-border/80 hover:bg-[#111] transition"
+        >
+          <div className="flex items-center gap-5">
+            <div className="w-12 h-12 rounded-full bg-[#1a1a1a] flex items-center justify-center border border-border">
+              <Dna className="w-6 h-6 text-emerald-400" />
             </div>
-            <Field label="Subject" placeholder="Project, role, or idea" />
             <div>
-              <label className="block text-[10px] font-mono uppercase tracking-[0.3em] text-muted-foreground mb-2">Message</label>
-              <textarea rows={5} placeholder="Tell me about the vision…" required
-                className="w-full bg-transparent border-b border-border focus:border-primary outline-none py-3 text-base resize-none transition" />
+              <h3 className="text-lg font-bold text-white">Rosalind</h3>
+              <p className="text-sm text-muted-foreground">Bioinformatics Problem Solving</p>
             </div>
-            <button type="submit"
-              className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-foreground text-background px-7 py-3.5 text-sm font-medium hover:scale-[1.02] transition">
-              {sent ? "Sent — talk soon" : (<>Send message <Send className="w-4 h-4 group-hover:translate-x-0.5 transition" /></>)}
-            </button>
-          </motion.form>
+          </div>
+          <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-white transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+        </motion.a>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-            className="space-y-4"
-          >
-            <a href="mailto:hello@alex.dev" className="group block glass-strong rounded-3xl p-6 hover:bg-foreground/5 transition">
-              <div className="flex items-center justify-between mb-4">
-                <Mail className="w-5 h-5 text-primary" />
-                <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition" />
-              </div>
-              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Email</div>
-              <div className="text-lg mt-1">hello@taru.dev</div>
-            </a>
-
-            <div className="glass-strong rounded-3xl p-6">
-              <div className="flex items-center justify-between mb-4">
-                <MapPin className="w-5 h-5 text-primary" />
-              </div>
-              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Location</div>
-              <div className="text-lg mt-1">Remote</div>
-              <div className="text-xs text-muted-foreground mt-1">Worldwide · responding within 24h</div>
+        <motion.a 
+          href="https://www.salesforce.com/trailblazer/gsr45duhuc9xrb7cb5" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="flex items-center justify-between bg-[#0d0d0d] border border-border rounded-2xl p-6 group hover:border-border/80 hover:bg-[#111] transition"
+        >
+          <div className="flex items-center gap-5">
+            <div className="w-12 h-12 rounded-full bg-[#1a1a1a] flex items-center justify-center border border-border">
+              <Cloud className="w-6 h-6 text-blue-400" />
             </div>
-
-            <div className="grid grid-cols-3 gap-3">
-              {["GitHub", "LinkedIn", "Twitter"].map((s) => (
-                <a key={s} href="#" className="group glass-strong rounded-2xl px-3 py-4 text-center hover:bg-foreground/5 transition">
-                  <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground group-hover:text-primary">{s}</div>
-                </a>
-              ))}
+            <div>
+              <h3 className="text-lg font-bold text-white">Salesforce</h3>
+              <p className="text-sm text-muted-foreground">Cloud Computing & Trailblazer Profile</p>
             </div>
-          </motion.div>
-        </div>
+          </div>
+          <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-white transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+        </motion.a>
 
-        <footer className="mt-24 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground font-mono uppercase tracking-widest">
-          <span>© 2026 · Taru</span>
-          <span>Crafted with intention</span>
-        </footer>
+        <motion.a 
+          href="https://leetcode.com/u/taru_01/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="flex items-center justify-between bg-[#0d0d0d] border border-border rounded-2xl p-6 group hover:border-border/80 hover:bg-[#111] transition"
+        >
+          <div className="flex items-center gap-5">
+            <div className="w-12 h-12 rounded-full bg-[#1a1a1a] flex items-center justify-center border border-border">
+              <Code className="w-6 h-6 text-yellow-400" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-white">LeetCode</h3>
+              <p className="text-sm text-muted-foreground">Algorithmic Challenges</p>
+            </div>
+          </div>
+          <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-white transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+        </motion.a>
+
+        <motion.a 
+          href="https://www.linkedin.com/in/tarulata-priya-051423313/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="flex items-center justify-between bg-[#0d0d0d] border border-border rounded-2xl p-6 group hover:border-border/80 hover:bg-[#111] transition"
+        >
+          <div className="flex items-center gap-5">
+            <div className="w-12 h-12 rounded-full bg-[#1a1a1a] flex items-center justify-center border border-border">
+              <Linkedin className="w-6 h-6 text-blue-500" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-white">LinkedIn</h3>
+              <p className="text-sm text-muted-foreground">Professional Network</p>
+            </div>
+          </div>
+          <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-white transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+        </motion.a>
+
+        <motion.a 
+          href="https://github.com/Tarulatapriya" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="flex items-center justify-between bg-[#0d0d0d] border border-border rounded-2xl p-6 group hover:border-border/80 hover:bg-[#111] transition"
+        >
+          <div className="flex items-center gap-5">
+            <div className="w-12 h-12 rounded-full bg-[#1a1a1a] flex items-center justify-center border border-border">
+              <Github className="w-6 h-6 text-gray-200" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-white">GitHub</h3>
+              <p className="text-sm text-muted-foreground">Code & Repositories</p>
+            </div>
+          </div>
+          <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-white transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+        </motion.a>
       </div>
-    </section>
-  );
-}
 
-function Field({ label, type = "text", placeholder }: { label: string; type?: string; placeholder?: string }) {
-  return (
-    <div>
-      <label className="block text-[10px] font-mono uppercase tracking-[0.3em] text-muted-foreground mb-2">{label}</label>
-      <input type={type} placeholder={placeholder} required
-        className="w-full bg-transparent border-b border-border focus:border-primary outline-none py-3 text-base transition" />
-    </div>
+      <motion.div 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="bg-[#0d0d0d] border border-border rounded-[2rem] p-8 md:p-10"
+      >
+        <div className="text-center mb-10">
+          <h3 className="text-2xl font-bold text-white mb-2">Let's work together</h3>
+          <p className="text-sm text-muted-foreground max-w-sm mx-auto">Open to select engagements, product collaborations, and creative residencies.</p>
+        </div>
+        
+        <form action="https://formsubmit.co/tarulatapriya7@gmail.com" method="POST" className="space-y-5 max-w-md mx-auto">
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground mb-2 ml-1">Name</label>
+              <input type="text" name="name" required className="w-full bg-[#111] border border-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-white/30 transition" placeholder="Jane Doe" />
+            </div>
+            <div>
+              <label className="block text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground mb-2 ml-1">Email</label>
+              <input type="email" name="email" required className="w-full bg-[#111] border border-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-white/30 transition" placeholder="jane@example.com" />
+            </div>
+          </div>
+          <div>
+            <label className="block text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground mb-2 ml-1">Message</label>
+            <textarea name="message" rows={4} required className="w-full bg-[#111] border border-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-white/30 transition resize-none" placeholder="Tell me about your idea..."></textarea>
+          </div>
+          
+          <input type="hidden" name="_subject" value="New contact from Portfolio!" />
+          <input type="hidden" name="_captcha" value="false" />
+          
+          <button type="submit" className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-black font-bold rounded-xl text-sm hover:bg-gray-200 transition mt-2">
+            Send Message
+          </button>
+        </form>
+      </motion.div>
+      
+      <footer className="mt-12 text-center text-xs text-muted-foreground font-mono uppercase tracking-widest">
+        <span>© 2026 · Tarulata Priya</span>
+      </footer>
+    </section>
   );
 }
