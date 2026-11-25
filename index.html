@@ -51,6 +51,16 @@ header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:var(-
 .ibtn:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--ink)}
 .kbd{font:500 12px var(--mono);padding:0 10px;width:auto;gap:6px}
 
+[hidden]{display:none!important}
+.split{position:relative;display:flex}
+.split .main{padding:10px 16px}
+.split .caret{padding:10px 11px;border-left-width:0;border-radius:0 12px 12px 0}
+.split .caret + .menu{}
+.split:has(.caret:not([hidden])) .main{border-radius:12px 0 0 12px}
+.split .btn:hover{transform:none;box-shadow:none;filter:brightness(.96)}
+.menu{position:absolute;right:0;top:calc(100% + 10px);min-width:230px;background:var(--bg);border:var(--bd);border-radius:14px;padding:6px;box-shadow:5px 5px 0 var(--ink);z-index:60}
+.menu a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 12px;border-radius:9px;text-decoration:none;font-size:15px}
+.menu a:hover,.menu a:focus-visible{background:var(--lime);color:#1B1B1F}
 /* buttons, chips */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:var(--bd);border-radius:12px;font:500 15px/1 var(--body);background:var(--card);color:var(--ink);cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s}
 .btn:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
@@ -236,7 +246,14 @@ footer a{text-underline-offset:3px}
     <div class="tools">
       <button class="ibtn kbd" id="palBtn" aria-label="Open command menu"><i class="ti ti-search" aria-hidden="true"></i><span id="kk">Ctrl K</span></button>
       <button class="ibtn" id="themeBtn" aria-label="Toggle dark mode"><i class="ti ti-moon" id="themeIc" aria-hidden="true"></i></button>
-      <a class="btn pink" href="#contact" style="padding:10px 16px">Say hello</a>
+      <div class="split">
+        <a class="btn pink main" href="#contact">Say hello</a>
+        <button class="btn pink caret" id="moreBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="More options" hidden><i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+        <div class="menu" id="menu" role="menu" hidden>
+          <a role="menuitem" href="#contact">Say hello <i class="ti ti-mail" aria-hidden="true"></i></a>
+          <a role="menuitem" id="prevLink" href="#" target="_blank" rel="noopener">Previous portfolio <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -402,6 +419,7 @@ footer a{text-underline-offset:3px}
 <footer class="wrap">
   <span>© <span id="yr">2026</span> Tarulata Priya</span>
   <span>Made with curiosity and a lot of tabs open</span>
+  <a id="prevFoot" href="#" target="_blank" rel="noopener" hidden>Previous portfolio ↗</a>
   <a href="#home">Back to top ↑</a>
 </footer>
 
@@ -418,6 +436,21 @@ footer a{text-underline-offset:3px}
   var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
   var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var fine=window.matchMedia("(pointer: fine)").matches;
+
+  var PREV_URL="";
+  (function(){
+    var more=$("#moreBtn"),menu=$("#menu"),pl=$("#prevLink"),pf=$("#prevFoot");
+    if(!PREV_URL){return}
+    pl.href=PREV_URL;pf.href=PREV_URL;pf.hidden=false;more.hidden=false;
+    function shut(){menu.hidden=true;more.setAttribute("aria-expanded","false")}
+    more.addEventListener("click",function(e){
+      e.stopPropagation();
+      var open=menu.hidden;menu.hidden=!open;more.setAttribute("aria-expanded",open?"true":"false");
+    });
+    menu.addEventListener("click",function(e){if(e.target.closest("a"))shut()});
+    document.addEventListener("click",function(e){if(!menu.hidden&&!e.target.closest(".split"))shut()});
+    document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!menu.hidden){shut();more.focus()}});
+  })();
 
   $("#yr").textContent=new Date().getFullYear();
   if(/Mac|iPhone|iPad/.test(navigator.platform)){$("#kk").textContent="⌘ K"}
@@ -518,6 +551,7 @@ footer a{text-underline-offset:3px}
     {l:"Email me",i:"ti-send",r:function(){location.href="mailto:tarulatapriya7@gmail.com"}},
     {l:"Toggle dark mode",i:"ti-moon",r:toggleTheme}
   ];
+  if(PREV_URL){cmds.splice(5,0,{l:"Open previous portfolio",i:"ti-history",r:open(PREV_URL)})}
   function render(){
     var q=pin.value.toLowerCase();
     shown=cmds.filter(function(c){return c.l.toLowerCase().indexOf(q)>-1});
