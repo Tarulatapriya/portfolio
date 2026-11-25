@@ -1,574 +1,107 @@
-<!doctype html>
-<html lang="en" data-theme="light">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tarulata Priya — Creative Engineer & AI Tinkerer</title>
-<meta name="description" content="Portfolio of Tarulata Priya: ML models, web apps and virtual labs at the intersection of biotechnology and software.">
-<meta name="theme-color" content="#FFF6E5">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tarulata Priya — Creative Engineer & AI Tinkerer">
-<meta property="og:description" content="Biology meets code, and they get along. ML, web and virtual labs.">
-<meta property="og:image" content="https://portfolio-omega-bay-u9ujp3vjra.vercel.app/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css">
-<script>try{var t=localStorage.getItem("theme");if(t){document.documentElement.setAttribute("data-theme",t)}}catch(e){}</script>
-<style>
-:root{
-  --bg:#FFF6E5;--ink:#1B1B1F;--card:#FFFFFF;--muted:#5A5A63;--on:#1B1B1F;
-  --lime:#C6F432;--pink:#FF7AB8;--sky:#7CC8FF;--yellow:#FFD84D;--violet:#A78BFA;--orange:#FF8A4C;--mint:#7EE8C0;
-  --bd:2px solid var(--ink);
-  --head:"Space Grotesk",system-ui,sans-serif;--body:"DM Sans",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;
-}
-[data-theme="dark"]{--bg:#15131B;--ink:#F6EFDF;--card:#201D2A;--muted:#A8A3B3}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);overflow-x:hidden;transition:background .3s,color .3s}
-a{color:inherit}
-a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
-html{-webkit-text-size-adjust:100%}
-img{max-width:100%;display:block}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-section{scroll-margin-top:84px}
-h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.08;letter-spacing:-.02em}
-.mono{font-family:var(--mono)}
-#bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--pink);z-index:100}
+From d4658e93a7b0aeba69446048d6d7638cb4b0e161 Mon Sep 17 00:00:00 2001
+From: Tarulata Priya <tarulatapriya7@gmail.com>
+Date: Wed, 25 Nov 2026 08:33:13 +0000
+Subject: [PATCH] Update meta tags, project repo links, contact copy-email and
+ positioning
 
-/* header */
-header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:var(--bd)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;height:68px}
-.logo{font:700 20px var(--head);background:var(--yellow);color:var(--on);border:var(--bd);border-radius:10px;padding:2px 12px;text-decoration:none;transform:rotate(-3deg);transition:transform .2s}
-.logo:hover{transform:rotate(3deg) scale(1.06)}
-.links{display:flex;gap:6px}
-.links a{font-size:14px;text-decoration:none;padding:6px 13px;border:2px solid transparent;border-radius:99px;transition:.15s}
-.links a:hover{border-color:var(--ink)}
-.links a.on{background:var(--lime);color:var(--on);border-color:var(--ink)}
-.tools{display:flex;gap:8px;align-items:center}
-.ibtn{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border:var(--bd);border-radius:10px;background:var(--card);color:var(--ink);cursor:pointer;font-size:18px;transition:.15s}
-.ibtn:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--ink)}
-.kbd{font:500 12px var(--mono);padding:0 10px;width:auto;gap:6px}
+---
+ index.html | 38 +++++++++++++++++++++++++++++---------
+ 1 file changed, 29 insertions(+), 9 deletions(-)
 
-/* buttons, chips */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:var(--bd);border-radius:12px;font:500 15px/1 var(--body);background:var(--card);color:var(--ink);cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
-.btn:active{transform:none;box-shadow:none}
-.btn.dark{background:var(--ink);color:var(--bg)}
-.btn.pink{background:var(--pink);color:var(--on)}
-.btn.lime{background:var(--lime);color:var(--on)}
-.pill{display:inline-block;font:500 13px var(--mono);border:var(--bd);border-radius:99px;padding:4px 14px;color:var(--on)}
-.chip{display:inline-block;border:1.5px solid var(--on);border-radius:99px;padding:1px 10px;font:500 12px var(--mono);color:var(--on)}
-.mint{background:var(--mint)}.lime{background:var(--lime)}.pink{background:var(--pink)}.sky{background:var(--sky)}.yellow{background:var(--yellow)}.violet{background:var(--violet)}.orange{background:var(--orange)}
-
-/* hero */
-.hero{display:block;padding:40px 24px 20px}
-.hero h1{font-size:clamp(2.5rem,7.5vw,5rem);margin:14px 0 14px}
-.hl{display:inline-block;border:var(--bd);border-radius:12px;padding:0 12px;color:var(--on)}
-.hl.pink{background:var(--pink);transform:rotate(-2deg)}
-.hl.lime{background:var(--lime);transform:rotate(1.5deg)}
-.lead{font-size:18px;max-width:560px;color:var(--muted)}
-.typed{margin:12px 0 20px;font:500 15px var(--mono)}
-.typed b{color:var(--pink)}
-.caret{display:inline-block;width:2px;height:1em;background:var(--ink);margin-left:3px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-/* marquee */
-.mq{border-block:var(--bd);background:var(--ink);color:var(--bg);overflow:hidden;transform:rotate(-1.2deg);margin:20px -20px 6px}
-.track{display:flex;gap:32px;width:max-content;padding:13px 0;font:500 20px var(--head);animation:mq 26s linear infinite}
-.mq:hover .track{animation-play-state:paused}
-.track span:nth-child(5n+1){color:var(--lime)}.track span:nth-child(5n+2){color:var(--pink)}.track span:nth-child(5n+3){color:var(--sky)}.track span:nth-child(5n+4){color:var(--yellow)}.track span:nth-child(5n){color:var(--violet)}
-@keyframes mq{to{transform:translateX(-50%)}}
-
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:18px 24px 4px}
-.stat{border:var(--bd);border-radius:16px;padding:16px 18px;color:var(--on)}
-.stat b{display:block;font:700 34px/1 var(--head)}
-.stat span{font-size:13px}
-
-/* section heads */
-.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
-.sh h2{font-size:clamp(2rem,4.4vw,3rem)}
-.sh small{font:400 15px var(--body);color:var(--muted);font-family:var(--body);letter-spacing:0}
-.pad{padding:44px 24px 0}
-.filters{display:flex;gap:8px;flex-wrap:wrap}
-.fbtn{font:500 13px var(--mono);border:var(--bd);border-radius:99px;padding:5px 14px;background:transparent;color:var(--ink);cursor:pointer;transition:.15s}
-.fbtn:hover{background:var(--card)}
-.fbtn.on{background:var(--lime);color:var(--on)}
-
-/* cards */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{position:relative;display:flex;flex-direction:column;gap:10px;border:var(--bd);border-radius:20px;padding:20px;color:var(--on);transition:transform .18s ease-out,box-shadow .18s;will-change:transform}
-.card:hover{box-shadow:7px 7px 0 var(--ink)}
-.card.feat{grid-column:span 2}
-.card h3{font-size:26px}
-.card.feat h3{font-size:32px}
-.ct{display:flex;align-items:center;justify-content:space-between}
-.tag{font:500 12px var(--mono);background:var(--bg);border:var(--bd);border-radius:99px;padding:2px 12px;color:var(--ink)}
-.go{width:36px;height:36px;border-radius:50%;background:var(--on);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:18px;text-decoration:none;transition:transform .2s}
-.card:hover .go{transform:rotate(45deg)}
-.vis{display:flex;align-items:center;justify-content:center;height:96px;border:2px dashed var(--on);border-radius:14px;font-size:44px;position:relative;background:rgba(255,255,255,.35)}
-.card.feat .vis{height:132px;font-size:64px}
-.vis .id{position:absolute;bottom:-11px;left:12px;background:var(--on);color:var(--lime);font:500 11px var(--mono);padding:1px 9px;border-radius:6px}
-.vis .cn{position:absolute;width:16px;height:16px;border:3px solid var(--on)}
-.cn.tl{top:8px;left:8px;border-right:0;border-bottom:0}.cn.tr{top:8px;right:8px;border-left:0;border-bottom:0}.cn.bl{bottom:8px;left:8px;border-right:0;border-top:0}.cn.br{bottom:8px;right:8px;border-left:0;border-top:0}
-.prob{font-size:14.5px;line-height:1.5}
-.prob b{display:inline-block;font:500 11px var(--mono);background:var(--on);color:var(--bg);border-radius:6px;padding:0 8px;margin-right:6px;vertical-align:1px;color:#FFF6E5}
-.how{font-size:14.5px;line-height:1.5;opacity:.85}
-.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:4px}
-.lk{display:flex;gap:14px;font:500 14px var(--body)}
-.lk a{display:inline-flex;align-items:center;gap:4px;text-underline-offset:3px}
-.card.hide{display:none}
-
-/* about */
-.about{display:grid;grid-template-columns:260px 1fr;gap:36px;align-items:center}
-.ph{position:relative;aspect-ratio:1;border:var(--bd);border-radius:50% 50% 24px 24px;background:var(--pink);overflow:hidden;display:flex;align-items:center;justify-content:center;font:700 72px var(--head);color:var(--on);transform:rotate(-3deg)}
-.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
-.about p{font-size:19px;max-width:620px;margin-bottom:16px}
-.facts{display:flex;gap:10px;flex-wrap:wrap}
-
-/* now notes */
-.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
-.note{border:var(--bd);border-radius:6px 6px 22px 6px;padding:18px;color:var(--on);font-size:15.5px;line-height:1.45}
-.note:nth-child(1){background:var(--yellow);transform:rotate(-2deg)}
-.note:nth-child(2){background:var(--sky);transform:rotate(1.5deg)}
-.note:nth-child(3){background:var(--mint);transform:rotate(-1deg)}
-.note i{display:block;font-size:26px;margin-bottom:8px}
-.note b{display:block;font:500 12px var(--mono);margin-bottom:4px}
-
-/* skills */
-.sk{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.sg{border:var(--bd);border-radius:20px;padding:20px;color:var(--on)}
-.sg h3{font-size:20px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.sg .chips{margin:0;padding:0}
-.sg .chip{background:var(--bg);color:var(--ink);border-color:var(--on);transition:transform .15s}
-.sg .chip:hover{transform:translateY(-3px) rotate(-3deg)}
-
-/* wins */
-.wins{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.win{border:var(--bd);border-radius:20px;padding:18px 20px;color:var(--on);display:flex;gap:14px;align-items:flex-start;transition:transform .2s}
-.win:hover{transform:rotate(0)!important;box-shadow:6px 6px 0 var(--ink)}
-.win:nth-child(odd){transform:rotate(-1.2deg)}.win:nth-child(even){transform:rotate(1.2deg)}
-.win i{font-size:30px;flex:none}
-.win h3{font-size:17px;line-height:1.2;margin-bottom:3px}
-.win span{font-size:13.5px;display:block}
-.win em{display:inline-block;margin-top:8px;font:500 11px var(--mono);font-style:normal;border:1.5px solid var(--on);border-radius:99px;padding:0 9px}
-.profiles{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-.seq{display:flex;gap:4px;justify-content:center;overflow:hidden;padding:30px 0 0}
-.seq span{flex:none;width:26px;height:32px;border:var(--bd);border-radius:6px;display:flex;align-items:center;justify-content:center;font:500 14px var(--mono);color:var(--on);animation:pop 3.2s ease-in-out infinite}
-@keyframes pop{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-
-/* contact */
-.contact{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;border:var(--bd);border-radius:28px;background:var(--violet);color:var(--on);padding:32px}
-.contact h2{font-size:clamp(2rem,4.4vw,3.2rem);margin-bottom:14px}
-.contact p{font-size:17px;max-width:420px;margin-bottom:20px}
-form{display:flex;flex-direction:column;gap:12px}
-input,textarea{font:400 16px var(--body);color:#1B1B1F;background:#FFF6E5;border:2px solid #1B1B1F;border-radius:12px;padding:12px 14px;width:100%;outline:none;transition:box-shadow .15s}
-input:focus,textarea:focus{box-shadow:4px 4px 0 #1B1B1F}
-textarea{min-height:110px;resize:vertical}
-.btn.send{background:#1B1B1F;color:var(--lime);justify-content:center;border-color:#1B1B1F}
-#st{font:500 14px var(--mono);min-height:20px}
-.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
-.socials a{width:46px;height:46px;border:2px solid #1B1B1F;border-radius:12px;background:#FFF6E5;display:flex;align-items:center;justify-content:center;font-size:22px;color:#1B1B1F;transition:.15s}
-.socials a:hover{transform:translate(-2px,-2px) rotate(-4deg);box-shadow:3px 3px 0 #1B1B1F}
-footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:28px 24px 28px;font:400 14px var(--mono);color:var(--muted)}
-footer a{text-underline-offset:3px}
-
-/* reveal */
-.rv{opacity:0;translate:0 28px;transition:opacity .6s ease,translate .6s ease}
-.rv.in{opacity:1;translate:0 0}
-
-/* cursor chip */
-#cur{position:fixed;left:0;top:0;z-index:200;pointer-events:none;background:var(--violet);color:#1B1B1F;border:2px solid #1B1B1F;border-radius:99px;padding:1px 10px;font:500 12px var(--mono);opacity:0;transition:opacity .2s,background .2s;white-space:nowrap}
-
-/* palette */
-#pal{position:fixed;inset:0;z-index:300;background:rgba(10,10,14,.55);display:none;align-items:flex-start;justify-content:center;padding-top:14vh}
-#pal.open{display:flex}
-.pb{width:min(560px,92vw);background:var(--bg);border:var(--bd);border-radius:18px;overflow:hidden;box-shadow:8px 8px 0 var(--pink)}
-.pb input{border:0;border-bottom:var(--bd);border-radius:0;background:var(--card);color:var(--ink);padding:16px 18px;font-size:17px}
-.pb input:focus{box-shadow:none}
-.pb ul{list-style:none;max-height:340px;overflow:auto;padding:8px}
-.pb li{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;cursor:pointer;font-size:15px}
-.pb li i{font-size:18px}
-.pb li.sel{background:var(--lime);color:#1B1B1F}
-.ph2{padding:10px 16px;border-top:var(--bd);font:400 12px var(--mono);color:var(--muted);display:flex;justify-content:space-between}
-
-:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
-
-@media (max-width:900px){
-  .hero{padding-top:28px}
-  .cards{grid-template-columns:1fr 1fr}
-  .stats{grid-template-columns:1fr 1fr}
-  .sk{grid-template-columns:1fr 1fr}
-  .wins,.notes{grid-template-columns:1fr 1fr}
-  .about{grid-template-columns:1fr}.ph{max-width:220px}
-  .contact{grid-template-columns:1fr;padding:22px}
-}
-@media (max-width:640px){
-  .kbd{display:none}
-  .nav{flex-wrap:wrap;height:auto;padding:10px 0 8px;row-gap:8px}
-  .links{order:3;width:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-  .links::-webkit-scrollbar{display:none}
-  .links a{flex:none}
-  section{scroll-margin-top:118px}
-  .contact h2{font-size:1.9rem}
-  .cards,.sk,.wins,.notes{grid-template-columns:1fr}
-  .card.feat{grid-column:auto}
-  .pad{padding-top:34px}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .rv{opacity:1;translate:none}
-}
-</style>
-</head>
-<body>
-<div id="bar"></div>
-<div id="cur" aria-hidden="true">hi</div>
-
-<header>
-  <div class="wrap nav">
-    <a href="#home" class="logo" aria-label="Home">taru.</a>
-    <nav class="links" aria-label="Main">
-      <a href="#work">Work</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#wins">Wins</a><a href="#contact">Contact</a>
-    </nav>
-    <div class="tools">
-      <button class="ibtn kbd" id="palBtn" aria-label="Open command menu"><i class="ti ti-search" aria-hidden="true"></i><span id="kk">Ctrl K</span></button>
-      <button class="ibtn" id="themeBtn" aria-label="Toggle dark mode"><i class="ti ti-moon" id="themeIc" aria-hidden="true"></i></button>
-      <a class="btn pink" href="#contact" style="padding:10px 16px">Say hello</a>
-    </div>
-  </div>
-</header>
-
-<main>
-<section id="home" class="wrap hero">
-  <div>
-    <span class="pill mint">Creative engineer · AI tinkerer · India</span>
-    <h1>Biology<br>meets <mark class="hl pink">code</mark>,<br>and they <mark class="hl lime">get along</mark>.</h1>
-    <p class="lead">I make ML models, web apps and virtual labs that turn messy biological data into things people can actually use.</p>
-    <p class="typed">Right now I'm into <b id="typed"></b><span class="caret"></span></p>
-    <div class="cta">
-      <a class="btn dark" href="#work" data-cursor="go">See my work <i class="ti ti-arrow-down-right" aria-hidden="true"></i></a>
-      <a class="btn" href="resume.pdf" download><i class="ti ti-download" aria-hidden="true"></i> Resume</a>
-    </div>
-  </div>
-</section>
-
-<div class="mq" aria-hidden="true"><div class="track" id="track">
-  <span>C++</span><span>Rust</span><span>React</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>Next.js</span><span>Tailwind CSS</span><span>Docker</span><span>PyTorch</span><span>LangChain</span>
-</div></div>
-
-<div class="wrap stats">
-  <div class="stat lime rv"><b>2+</b><span>years building</span></div>
-  <div class="stat pink rv"><b>5</b><span>live projects</span></div>
-  <div class="stat sky rv"><b>1st</b><span>blockchain track, hackathon</span></div>
-  <div class="stat yellow rv"><b>3rd</b><span>prize at BioQuest</span></div>
-</div>
-
-<section id="work" class="wrap pad">
-  <div class="sh rv">
-    <h2>Specimens <small>(my projects)</small></h2>
-    <div class="filters" role="group" aria-label="Filter projects">
-      <button class="fbtn on" data-f="all">All</button>
-      <button class="fbtn" data-f="ai">AI and ML</button>
-      <button class="fbtn" data-f="web">Web</button>
-      <button class="fbtn" data-f="bio">Bio</button>
-    </div>
-  </div>
-  <div class="cards">
-
-    <article class="card lime feat rv" data-cat="ai bio" data-cursor="view">
-      <div class="ct"><span class="tag">Specimen 01</span><a class="go" href="https://campus-leaf-scan.vercel.app/" target="_blank" rel="noopener" aria-label="Open Campus Leaf Scan live demo"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></div>
-      <div class="vis"><span class="cn tl"></span><span class="cn tr"></span><span class="cn bl"></span><span class="cn br"></span><i class="ti ti-leaf" aria-hidden="true"></i><span class="id">leaf detected</span></div>
-      <h3>Campus Leaf Scan</h3>
-      <p class="prob"><b>PROBLEM</b>Most people can't tell which tree or plant they're looking at, and flipping through field guides is slow.</p>
-      <p class="how">An AI-powered identifier that classifies a plant from an image of its leaf.</p>
-      <div class="chips"><span class="chip">AI</span><span class="chip">Image classification</span><span class="chip">Live demo</span></div>
-      <div class="lk"><a href="https://campus-leaf-scan.vercel.app/" target="_blank" rel="noopener"><i class="ti ti-external-link" aria-hidden="true"></i> Live demo</a><a href="https://github.com/Tarulatapriya" target="_blank" rel="noopener"><i class="ti ti-brand-github" aria-hidden="true"></i> Code</a></div>
-    </article>
-
-    <article class="card pink rv" data-cat="ai bio" data-cursor="view">
-      <div class="ct"><span class="tag">Specimen 02</span><a class="go" href="https://healthguard-ai-predict.vercel.app/" target="_blank" rel="noopener" aria-label="Open Diabetes Prediction live demo"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></div>
-      <div class="vis"><i class="ti ti-heartbeat" aria-hidden="true"></i></div>
-      <h3>Diabetes prediction</h3>
-      <p class="prob"><b>PROBLEM</b>Diabetes often goes unnoticed until it's advanced, and a quick early risk check isn't always within reach.</p>
-      <p class="how">A machine learning model that predicts diabetes outcomes from health data.</p>
-      <div class="chips"><span class="chip">Python</span><span class="chip">Scikit-learn</span></div>
-      <div class="lk"><a href="https://healthguard-ai-predict.vercel.app/" target="_blank" rel="noopener"><i class="ti ti-external-link" aria-hidden="true"></i> Live</a><a href="https://github.com/Tarulatapriya" target="_blank" rel="noopener"><i class="ti ti-brand-github" aria-hidden="true"></i> Code</a></div>
-    </article>
-
-    <article class="card yellow rv" data-cat="web bio" data-cursor="view">
-      <div class="ct"><span class="tag">Specimen 03</span><a class="go" href="https://pathogen-psi.vercel.app/" target="_blank" rel="noopener" aria-label="Open Pathogen Information live site"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></div>
-      <div class="vis"><i class="ti ti-virus" aria-hidden="true"></i></div>
-      <h3>Pathogen info</h3>
-      <p class="prob"><b>PROBLEM</b>Facts about pathogens are scattered across dense papers, which makes them hard for students to study and compare.</p>
-      <p class="how">An educational website with structured, easy-to-scan biological information.</p>
-      <div class="chips"><span class="chip">Web</span><span class="chip">Education</span></div>
-      <div class="lk"><a href="https://pathogen-psi.vercel.app/" target="_blank" rel="noopener"><i class="ti ti-external-link" aria-hidden="true"></i> Live</a><a href="https://github.com/Tarulatapriya" target="_blank" rel="noopener"><i class="ti ti-brand-github" aria-hidden="true"></i> Code</a></div>
-    </article>
-
-    <article class="card sky rv" data-cat="web bio" data-cursor="view">
-      <div class="ct"><span class="tag">Specimen 04</span><a class="go" href="https://my-virtual-lab.vercel.app/" target="_blank" rel="noopener" aria-label="Open Virtual Lab live site"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></div>
-      <div class="vis"><i class="ti ti-flask" aria-hidden="true"></i></div>
-      <h3>Virtual lab</h3>
-      <p class="prob"><b>PROBLEM</b>Many students don't have a well-equipped lab, so experiments stay theoretical.</p>
-      <p class="how">An immersive virtual laboratory sandbox built for students.</p>
-      <div class="chips"><span class="chip">Web</span><span class="chip">Sandbox</span></div>
-      <div class="lk"><a href="https://my-virtual-lab.vercel.app/" target="_blank" rel="noopener"><i class="ti ti-external-link" aria-hidden="true"></i> Live</a><a href="https://github.com/Tarulatapriya" target="_blank" rel="noopener"><i class="ti ti-brand-github" aria-hidden="true"></i> Code</a></div>
-    </article>
-
-    <article class="card violet rv" data-cat="web" data-cursor="view">
-      <div class="ct"><span class="tag">Specimen 05</span><a class="go" href="https://music-phi-brown.vercel.app/" target="_blank" rel="noopener" aria-label="Open Spotify Clone live site"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></div>
-      <div class="vis"><i class="ti ti-music" aria-hidden="true"></i></div>
-      <h3>Spotify clone</h3>
-      <p class="prob"><b>PROBLEM</b>I wanted to learn how a real music player handles playlists, state and controls, so I rebuilt one.</p>
-      <p class="how">A responsive clone with playlist features and interactive music controls.</p>
-      <div class="chips"><span class="chip">Responsive UI</span><span class="chip">Playlists</span></div>
-      <div class="lk"><a href="https://music-phi-brown.vercel.app/" target="_blank" rel="noopener"><i class="ti ti-external-link" aria-hidden="true"></i> Live</a><a href="https://github.com/Tarulatapriya" target="_blank" rel="noopener"><i class="ti ti-brand-github" aria-hidden="true"></i> Code</a></div>
-    </article>
-
-  </div>
-</section>
-
-<section id="about" class="wrap pad">
-  <div class="about">
-    <div class="ph rv" aria-label="Portrait of Tarulata Priya">TP<img src="taru-cutout.webp" alt="Tarulata Priya smiling, seated, wearing a black top" width="800" height="800" loading="lazy" decoding="async" onerror="this.remove()"></div>
-    <div class="rv">
-      <div class="sh" style="margin-bottom:16px"><h2>Hi, I'm Tarulata</h2></div>
-      <p>Creative Engineer &amp; AI Tinkerer based in India with 2+ years of experience building intelligent solutions at the intersection of biotechnology and technology. Passionate about Machine Learning and modern software development.</p>
-      <div class="facts"><span class="pill lime">Biotech × software</span><span class="pill sky">Machine learning</span><span class="pill yellow">Open to collaborations</span></div>
-    </div>
-  </div>
-  <div class="notes">
-    <div class="note rv"><i class="ti ti-dna-2" aria-hidden="true"></i><b>ON MY BENCH</b>Building AI tools that make biology easier to explore.</div>
-    <div class="note rv"><i class="ti ti-robot" aria-hidden="true"></i><b>EXPLORING</b>LLM-powered apps with LangChain.</div>
-    <div class="note rv"><i class="ti ti-puzzle" aria-hidden="true"></i><b>PRACTICING</b>Problem solving on LeetCode and Rosalind.</div>
-  </div>
-</section>
-
-<section id="skills" class="wrap pad">
-  <div class="sh rv"><h2>Toolbox</h2></div>
-  <div class="sk">
-    <div class="sg violet rv"><h3><i class="ti ti-brain" aria-hidden="true"></i>AI and ML</h3><div class="chips"><span class="chip">PyTorch</span><span class="chip">LangChain</span><span class="chip">Scikit-learn</span><span class="chip">Python</span></div></div>
-    <div class="sg lime rv"><h3><i class="ti ti-world-www" aria-hidden="true"></i>Web</h3><div class="chips"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Node.js</span><span class="chip">Tailwind CSS</span><span class="chip">PostgreSQL</span></div></div>
-    <div class="sg orange rv"><h3><i class="ti ti-cpu" aria-hidden="true"></i>Systems</h3><div class="chips"><span class="chip">C++</span><span class="chip">Rust</span><span class="chip">Docker</span></div></div>
-    <div class="sg mint rv"><h3><i class="ti ti-microscope" aria-hidden="true"></i>Bio</h3><div class="chips"><span class="chip">Biopython</span><span class="chip">Bioinformatics</span></div></div>
-  </div>
-</section>
-
-<section id="wins" class="wrap pad">
-  <div class="sh rv"><h2>Wins and badges</h2></div>
-  <div class="wins">
-    <div class="win lime rv"><i class="ti ti-trophy" aria-hidden="true"></i><div><h3>Track winner, blockchain</h3><span>Alva's Institute of Engineering &amp; Technology</span><em>Hackathon</em></div></div>
-    <div class="win pink rv"><i class="ti ti-medal" aria-hidden="true"></i><div><h3>Third prize, BioQuest</h3><span>NMAM Institute of Technology</span><em>Competition</em></div></div>
-    <div class="win sky rv"><i class="ti ti-certificate" aria-hidden="true"></i><div><h3>Bioinformatics &amp; AI</h3><span>IIT Kharagpur</span><em>Certification</em></div></div>
-    <div class="win yellow rv"><i class="ti ti-code" aria-hidden="true"></i><div><h3>Full stack web development</h3><span>Udemy</span><em>Certification</em></div></div>
-    <div class="win mint rv"><i class="ti ti-dna-2" aria-hidden="true"></i><div><h3>Biopython for bioinformatics</h3><span>Udemy</span><em>Certification</em></div></div>
-    <div class="win violet rv"><i class="ti ti-cloud" aria-hidden="true"></i><div><h3>Cloud computing</h3><span>Salesforce Trailblazer</span><em>Profile</em></div></div>
-  </div>
-  <div class="profiles rv">
-    <a class="btn" href="https://rosalind.info/users/tarulata_priya/" target="_blank" rel="noopener"><i class="ti ti-dna-2" aria-hidden="true"></i> Rosalind</a>
-    <a class="btn" href="https://leetcode.com/u/taru_01/" target="_blank" rel="noopener"><i class="ti ti-code" aria-hidden="true"></i> LeetCode</a>
-    <a class="btn" href="https://www.salesforce.com/trailblazer/gsr45duhuc9xrb7cb5" target="_blank" rel="noopener"><i class="ti ti-cloud" aria-hidden="true"></i> Trailblazer</a>
-  </div>
-  <div class="seq" id="seq" aria-hidden="true"></div>
-</section>
-
-<section id="contact" class="wrap pad" style="padding-bottom:20px">
-  <div class="contact rv">
-    <div>
-      <h2>Got a weird, useful idea? Let's make it.</h2>
-      <p>Open to select engagements, product collaborations and creative residencies. Tell me what you're building.</p>
-      <div class="socials">
-        <a href="https://github.com/Tarulatapriya" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
-        <a href="https://www.linkedin.com/in/tarulata-priya-051423313/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
-        <a href="https://leetcode.com/u/taru_01/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="ti ti-code"></i></a>
-        <a href="mailto:tarulatapriya7@gmail.com" aria-label="Email"><i class="ti ti-mail"></i></a>
-      </div>
-    </div>
-    <form id="form" data-endpoint="https://formsubmit.co/ajax/tarulatapriya7@gmail.com" novalidate>
-      <input name="name" placeholder="Your name" aria-label="Your name" autocomplete="name">
-      <input name="email" type="email" placeholder="name@company.com" aria-label="Your email" autocomplete="email">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <textarea name="message" placeholder="What are we making?" aria-label="Message"></textarea>
-      <button class="btn send" type="submit">Send message <i class="ti ti-send" aria-hidden="true"></i></button>
-      <div id="st" role="status" aria-live="polite"></div>
-    </form>
-  </div>
-</section>
-</main>
-
-<footer class="wrap">
-  <span>© <span id="yr">2026</span> Tarulata Priya</span>
-  <span>Made with curiosity and a lot of tabs open</span>
-  <a href="#home">Back to top ↑</a>
-</footer>
-
-<div id="pal" role="dialog" aria-modal="true" aria-label="Command menu">
-  <div class="pb">
-    <input id="pin" placeholder="Type a command or search…" aria-label="Search commands" autocomplete="off">
-    <ul id="plist"></ul>
-    <div class="ph2"><span>↑ ↓ to move · Enter to run</span><span>Esc to close</span></div>
-  </div>
-</div>
-
-<script>
-(function(){
-  var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
-  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var fine=window.matchMedia("(pointer: fine)").matches;
-
-  $("#yr").textContent=new Date().getFullYear();
-  if(/Mac|iPhone|iPad/.test(navigator.platform)){$("#kk").textContent="⌘ K"}
-
-  function setTheme(t){
-    document.documentElement.setAttribute("data-theme",t);
-    $("#themeIc").className="ti "+(t==="dark"?"ti-sun":"ti-moon");
-    var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",t==="dark"?"#15131B":"#FFF6E5");
-    try{localStorage.setItem("theme",t)}catch(e){}
-  }
-  function toggleTheme(){setTheme(document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark")}
-  setTheme(document.documentElement.getAttribute("data-theme")||"light");
-  $("#themeBtn").addEventListener("click",toggleTheme);
-
-  var tr=$("#track");tr.innerHTML+=tr.innerHTML;
-
-  var words=["machine learning","bioinformatics","full-stack apps","virtual labs"],wi=0,ci=0,del=false,tEl=$("#typed");
-  function type(){
-    var w=words[wi];
-    if(reduce){tEl.textContent=w;return}
-    tEl.textContent=w.slice(0,ci);
-    if(!del&&ci<w.length){ci++;setTimeout(type,85)}
-    else if(!del){del=true;setTimeout(type,1400)}
-    else if(ci>0){ci--;setTimeout(type,40)}
-    else{del=false;wi=(wi+1)%words.length;setTimeout(type,250)}
-  }
-  type();
-
-
-  var seqEl=$("#seq"),cols={A:"#C6F432",T:"#FF7AB8",G:"#7CC8FF",C:"#FFD84D"},letters="ATGCCGTAATGCGATCGTAGCTAGGCTAATGCCGTA".split("");
-  letters.forEach(function(c,i){
-    var s=document.createElement("span");s.textContent=c;s.style.background=cols[c];s.style.animationDelay=(i*0.12)+"s";seqEl.appendChild(s);
-  });
-
-  var fb=$$(".fbtn"),cards=$$(".card");
-  fb.forEach(function(b){
-    b.addEventListener("click",function(){
-      fb.forEach(function(x){x.classList.remove("on")});b.classList.add("on");
-      var f=b.getAttribute("data-f");
-      cards.forEach(function(c){
-        var ok=f==="all"||c.getAttribute("data-cat").split(" ").indexOf(f)>-1;
-        c.classList.toggle("hide",!ok);
-      });
-    });
-  });
-
-  if(fine&&!reduce){
-    cards.forEach(function(c){
-      c.addEventListener("pointermove",function(e){
-        var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-        c.style.transform="perspective(900px) rotateY("+(x*7)+"deg) rotateX("+(-y*7)+"deg) translateY(-5px)";
-      });
-      c.addEventListener("pointerleave",function(){c.style.transform=""});
-    });
-  }
-
-  if("IntersectionObserver" in window&&!reduce){
-    var io=new IntersectionObserver(function(es){
-      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}});
-    },{threshold:.12});
-    $$(".rv").forEach(function(el,i){el.style.transitionDelay=((i%3)*80)+"ms";io.observe(el)});
-  }else{$$(".rv").forEach(function(el){el.classList.add("in")})}
-
-  var navA=$$(".links a"),secs=navA.map(function(a){return $(a.getAttribute("href"))});
-  function onScroll(){
-    var h=document.documentElement,p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);
-    $("#bar").style.width=(p*100)+"%";
-    var y=window.scrollY+120,cur=-1;
-    secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});
-    navA.forEach(function(a,i){a.classList.toggle("on",i===cur)});
-  }
-  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
-
-  var cur=$("#cur");
-  if(fine&&!reduce){
-    var cx=0,cy=0,tx=0,ty=0,label="hi";
-    window.addEventListener("pointermove",function(e){tx=e.clientX+16;ty=e.clientY+16;cur.style.opacity=1;
-      var t=e.target.closest&&e.target.closest("[data-cursor]");var l=t?t.getAttribute("data-cursor"):"hi";
-      if(l!==label){label=l;cur.textContent=l;cur.style.background=t?"#C6F432":"#A78BFA"}
-    });
-    document.addEventListener("pointerleave",function(){cur.style.opacity=0});
-    (function loop(){cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;cur.style.transform="translate("+cx+"px,"+cy+"px)";requestAnimationFrame(loop)})();
-  }
-
-  var P=$("#pal"),pin=$("#pin"),pl=$("#plist"),sel=0,shown=[];
-  function go(h){return function(){var el=$(h);if(el)el.scrollIntoView({behavior:reduce?"auto":"smooth"})}}
-  function open(u){return function(){window.open(u,"_blank","noopener")}}
-  var cmds=[
-    {l:"Go to projects",i:"ti-layout-grid",r:go("#work")},
-    {l:"Go to about",i:"ti-user",r:go("#about")},
-    {l:"Go to skills",i:"ti-tools",r:go("#skills")},
-    {l:"Go to wins and badges",i:"ti-trophy",r:go("#wins")},
-    {l:"Go to contact",i:"ti-mail",r:go("#contact")},
-    {l:"Open Campus Leaf Scan",i:"ti-leaf",r:open("https://campus-leaf-scan.vercel.app/")},
-    {l:"Open GitHub",i:"ti-brand-github",r:open("https://github.com/Tarulatapriya")},
-    {l:"Open LinkedIn",i:"ti-brand-linkedin",r:open("https://www.linkedin.com/in/tarulata-priya-051423313/")},
-    {l:"Download resume",i:"ti-download",r:function(){var a=document.createElement("a");a.href="resume.pdf";a.download="";a.click()}},
-    {l:"Email me",i:"ti-send",r:function(){location.href="mailto:tarulatapriya7@gmail.com"}},
-    {l:"Toggle dark mode",i:"ti-moon",r:toggleTheme}
-  ];
-  function render(){
-    var q=pin.value.toLowerCase();
-    shown=cmds.filter(function(c){return c.l.toLowerCase().indexOf(q)>-1});
-    if(sel>=shown.length)sel=0;
-    pl.innerHTML="";
-    if(!shown.length){var n=document.createElement("li");n.textContent="No match. Try another word.";pl.appendChild(n);return}
-    shown.forEach(function(c,i){
-      var li=document.createElement("li");if(i===sel)li.className="sel";
-      li.innerHTML='<i class="ti '+c.i+'" aria-hidden="true"></i><span>'+c.l+'</span>';
-      li.addEventListener("click",function(){run(i)});
-      li.addEventListener("mousemove",function(){if(sel!==i){sel=i;render()}});
-      pl.appendChild(li);
-    });
-  }
-  function run(i){var c=shown[i];if(!c)return;close();c.r()}
-  function openP(){P.classList.add("open");pin.value="";sel=0;render();setTimeout(function(){pin.focus()},10)}
-  function close(){P.classList.remove("open")}
-  $("#palBtn").addEventListener("click",openP);
-  P.addEventListener("click",function(e){if(e.target===P)close()});
-  pin.addEventListener("input",function(){sel=0;render()});
-  document.addEventListener("keydown",function(e){
-    if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();P.classList.contains("open")?close():openP();return}
-    if(!P.classList.contains("open"))return;
-    if(e.key==="Escape"){close()}
-    else if(e.key==="ArrowDown"){e.preventDefault();sel=(sel+1)%Math.max(shown.length,1);render()}
-    else if(e.key==="ArrowUp"){e.preventDefault();sel=(sel-1+shown.length)%Math.max(shown.length,1);render()}
-    else if(e.key==="Enter"){e.preventDefault();run(sel)}
-  });
-
-  var form=$("#form"),st=$("#st");
-  form.addEventListener("submit",function(e){
-    e.preventDefault();
-    var d=new FormData(form),name=(d.get("name")||"").trim(),email=(d.get("email")||"").trim(),msg=(d.get("message")||"").trim();
-    if(!name||!email||!msg){st.textContent="Fill in your name, email and message.";return}
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){st.textContent="That email doesn't look right.";return}
-    if(d.get("_honey")){return}
-    var ep=form.getAttribute("data-endpoint"),btn=form.querySelector("button[type=submit]");
-    d.append("_subject","New message from your portfolio: "+name);
-    d.append("_captcha","false");
-    d.append("_template","table");
-    st.textContent="Sending…";btn.disabled=true;
-    fetch(ep,{method:"POST",body:d,headers:{Accept:"application/json"}}).then(function(r){
-      return r.json().then(function(j){return {ok:r.ok,j:j}},function(){return {ok:r.ok,j:{}}});
-    }).then(function(x){
-      if(x.ok&&String(x.j.success)!=="false"){form.reset();st.textContent="Sent. Thanks, I'll get back to you soon."}
-      else{throw new Error("fail")}
-    }).catch(function(){
-      st.innerHTML='Couldn\'t send that. <a href="mailto:tarulatapriya7@gmail.com" style="color:inherit">Email me directly</a>.';
-    }).then(function(){btn.disabled=false});
-  });
-})();
-</script>
-</body>
-</html>
+diff --git a/index.html b/index.html
+index 2a89b3e..20c7118 100644
+--- a/index.html
++++ b/index.html
+@@ -3,14 +3,25 @@
+ <head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+-<title>Tarulata Priya — Creative Engineer & AI Tinkerer</title>
+-<meta name="description" content="Portfolio of Tarulata Priya: ML models, web apps and virtual labs at the intersection of biotechnology and software.">
++<title>Tarulata Priya — Bioinformatics &amp; ML Developer</title>
++<meta name="description" content="Tarulata Priya is a bioinformatics and machine learning developer in India. ML models, full-stack web apps and virtual labs that turn biological data into usable tools.">
++<meta name="author" content="Tarulata Priya">
++<link rel="canonical" href="https://portfolio-omega-bay-u9ujp3vjra.vercel.app/">
+ <meta name="theme-color" content="#FFF6E5">
+ <meta property="og:type" content="website">
+-<meta property="og:title" content="Tarulata Priya — Creative Engineer & AI Tinkerer">
+-<meta property="og:description" content="Biology meets code, and they get along. ML, web and virtual labs.">
++<meta property="og:site_name" content="Tarulata Priya">
++<meta property="og:url" content="https://portfolio-omega-bay-u9ujp3vjra.vercel.app/">
++<meta property="og:title" content="Tarulata Priya — Bioinformatics &amp; ML Developer">
++<meta property="og:description" content="ML models, web apps and virtual labs at the intersection of biotechnology and software. See projects, certifications and contact details.">
+ <meta property="og:image" content="https://portfolio-omega-bay-u9ujp3vjra.vercel.app/og.png">
++<meta property="og:image:width" content="1200">
++<meta property="og:image:height" content="630">
++<meta property="og:image:alt" content="Tarulata Priya — Bioinformatics and ML Developer portfolio">
+ <meta name="twitter:card" content="summary_large_image">
++<meta name="twitter:title" content="Tarulata Priya — Bioinformatics &amp; ML Developer">
++<meta name="twitter:description" content="ML models, web apps and virtual labs at the intersection of biotechnology and software.">
++<meta name="twitter:image" content="https://portfolio-omega-bay-u9ujp3vjra.vercel.app/og.png">
++<meta name="twitter:image:alt" content="Tarulata Priya — Bioinformatics and ML Developer portfolio">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+@@ -244,7 +255,7 @@ footer a{text-underline-offset:3px}
+ <main>
+ <section id="home" class="wrap hero">
+   <div>
+-    <span class="pill mint">Creative engineer · AI tinkerer · India</span>
++    <span class="pill mint">Bioinformatics · ML · Web · India</span>
+     <h1>Biology<br>meets <mark class="hl pink">code</mark>,<br>and they <mark class="hl lime">get along</mark>.</h1>
+     <p class="lead">I make ML models, web apps and virtual labs that turn messy biological data into things people can actually use.</p>
+     <p class="typed">Right now I'm into <b id="typed"></b><span class="caret"></span></p>
+@@ -305,7 +316,7 @@ footer a{text-underline-offset:3px}
+       <p class="prob"><b>PROBLEM</b>Facts about pathogens are scattered across dense papers, which makes them hard for students to study and compare.</p>
+       <p class="how">An educational website with structured, easy-to-scan biological information.</p>
+       <div class="chips"><span class="chip">Web</span><span class="chip">Education</span></div>
+-      <div class="lk"><a href="https://pathogen-psi.vercel.app/" target="_blank" rel="noopener"><i class="ti ti-external-link" aria-hidden="true"></i> Live</a><a href="https://github.com/Tarulatapriya" target="_blank" rel="noopener"><i class="ti ti-brand-github" aria-hidden="true"></i> Code</a></div>
++      <div class="lk"><a href="https://pathogen-psi.vercel.app/" target="_blank" rel="noopener"><i class="ti ti-external-link" aria-hidden="true"></i> Live</a><a href="https://github.com/Tarulatapriya/pathogen" target="_blank" rel="noopener"><i class="ti ti-brand-github" aria-hidden="true"></i> Code</a></div>
+     </article>
+ 
+     <article class="card sky rv" data-cat="web bio" data-cursor="view">
+@@ -325,7 +336,7 @@ footer a{text-underline-offset:3px}
+       <p class="prob"><b>PROBLEM</b>I wanted to learn how a real music player handles playlists, state and controls, so I rebuilt one.</p>
+       <p class="how">A responsive clone with playlist features and interactive music controls.</p>
+       <div class="chips"><span class="chip">Responsive UI</span><span class="chip">Playlists</span></div>
+-      <div class="lk"><a href="https://music-phi-brown.vercel.app/" target="_blank" rel="noopener"><i class="ti ti-external-link" aria-hidden="true"></i> Live</a><a href="https://github.com/Tarulatapriya" target="_blank" rel="noopener"><i class="ti ti-brand-github" aria-hidden="true"></i> Code</a></div>
++      <div class="lk"><a href="https://music-phi-brown.vercel.app/" target="_blank" rel="noopener"><i class="ti ti-external-link" aria-hidden="true"></i> Live</a><a href="https://github.com/Tarulatapriya/music" target="_blank" rel="noopener"><i class="ti ti-brand-github" aria-hidden="true"></i> Code</a></div>
+     </article>
+ 
+   </div>
+@@ -336,7 +347,7 @@ footer a{text-underline-offset:3px}
+     <div class="ph rv" aria-label="Portrait of Tarulata Priya">TP<img src="taru-cutout.webp" alt="Tarulata Priya smiling, seated, wearing a black top" width="800" height="800" loading="lazy" decoding="async" onerror="this.remove()"></div>
+     <div class="rv">
+       <div class="sh" style="margin-bottom:16px"><h2>Hi, I'm Tarulata</h2></div>
+-      <p>Creative Engineer &amp; AI Tinkerer based in India with 2+ years of experience building intelligent solutions at the intersection of biotechnology and technology. Passionate about Machine Learning and modern software development.</p>
++      <p>Bioinformatics and machine learning developer based in India. I build ML models, web apps and virtual labs at the intersection of biotechnology and software, from Rosalind problem sets to deployed prediction tools.</p>
+       <div class="facts"><span class="pill lime">Biotech × software</span><span class="pill sky">Machine learning</span><span class="pill yellow">Open to collaborations</span></div>
+     </div>
+   </div>
+@@ -379,7 +390,8 @@ footer a{text-underline-offset:3px}
+   <div class="contact rv">
+     <div>
+       <h2>Got a weird, useful idea? Let's make it.</h2>
+-      <p>Open to select engagements, product collaborations and creative residencies. Tell me what you're building.</p>
++      <p>Open to internships, research collaborations and project work in bioinformatics, ML and web. Tell me what you're building.</p>
++      <p class="mono" style="margin:14px 0 10px"><a href="mailto:tarulatapriya7@gmail.com" id="mail">tarulatapriya7@gmail.com</a> <button type="button" class="btn" id="copy" style="padding:6px 12px;font-size:13px;margin-left:8px" aria-label="Copy email address"><i class="ti ti-copy" aria-hidden="true"></i> <span>Copy</span></button></p>
+       <div class="socials">
+         <a href="https://github.com/Tarulatapriya" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
+         <a href="https://www.linkedin.com/in/tarulata-priya-051423313/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+@@ -547,6 +559,14 @@ footer a{text-underline-offset:3px}
+     else if(e.key==="Enter"){e.preventDefault();run(sel)}
+   });
+ 
++  var cp=$("#copy");
++  if(cp){cp.addEventListener("click",function(){
++    var t="tarulatapriya7@gmail.com",lab=cp.querySelector("span");
++    function done(){lab.textContent="Copied";setTimeout(function(){lab.textContent="Copy"},1800)}
++    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){location.href="mailto:"+t})}
++    else{location.href="mailto:"+t}
++  })}
++
+   var form=$("#form"),st=$("#st");
+   form.addEventListener("submit",function(e){
+     e.preventDefault();
+-- 
+2.43.0
